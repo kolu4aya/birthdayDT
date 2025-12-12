@@ -1,0 +1,297 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Поздравления — Дом культуры</title>
+<style>
+  /* Сброс и базовые стили */
+  * {box-sizing:border-box; margin:0; padding:0;}
+  body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(180deg,#f7f9ff 0%, #fff 60%);
+    color:#122;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.45;
+  }
+
+  /* Шапка */
+  .site-header {
+    position:sticky; top:0;
+    backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.7);
+    border-bottom: 1px solid rgba(18,34,34,0.06);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 24px;
+    z-index:100;
+    animation: slideDown 600ms ease;
+  }
+  .logo {
+    display:flex; align-items:center; gap:12px;
+  }
+  .logo .mark {
+    width:48px; height:48px;
+    background: linear-gradient(135deg,#ffb198,#ff7ab6);
+    border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    color:white; font-weight:700;
+    box-shadow: 0 6px 18px rgba(255,90,120,0.18);
+    transform: translateY(-2px);
+  }
+  .site-title {
+    font-size:18px; font-weight:600;
+  }
+  .site-sub {
+    font-size:12px; color:rgba(18,34,34,0.6);
+  }
+
+  @keyframes slideDown {
+    from { transform: translateY(-14px); opacity:0; }
+    to { transform: translateY(0); opacity:1; }
+  }
+
+  /* Главный контейнер */
+  .container {
+    max-width:1100px;
+    margin:32px auto;
+    padding:0 20px;
+  }
+
+  /* Герой секция */
+  .hero {
+    background: linear-gradient(90deg, rgba(255,250,240,0.6), rgba(245,255,255,0.6));
+    border-radius:14px;
+    padding:34px;
+    display:flex;
+    gap:28px;
+    align-items:center;
+    box-shadow: 0 10px 30px rgba(20,40,60,0.06);
+    overflow:hidden;
+  }
+  .hero .text {
+    flex:1;
+  }
+  .hero h1 {
+    font-size:28px; margin-bottom:8px;
+    color:#0b3954;
+  }
+  .hero p {
+    color:#234; margin-bottom:14px;
+  }
+  .hero .cta {
+    display:inline-block;
+    padding:10px 16px;
+    background:linear-gradient(90deg,#ff8fa3,#ffb86b);
+    color:white;
+    border-radius:10px;
+    font-weight:600;
+    text-decoration:none;
+    box-shadow: 0 8px 20px rgba(255,120,140,0.18);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .hero .cta:hover { transform:translateY(-4px); box-shadow: 0 18px 30px rgba(255,110,140,0.2); }
+
+  .hero .art {
+    width:220px; height:140px;
+    border-radius:10px;
+    background: radial-gradient(circle at 20% 20%, #fff7f2, transparent 20%),
+                linear-gradient(135deg,#ffd9d0,#ffe8a8);
+    box-shadow: inset 0 -6px 18px rgba(255,255,255,0.35), 0 12px 34px rgba(30,40,60,0.06);
+    position:relative;
+    overflow:hidden;
+    flex-shrink:0;
+    animation: float 4200ms ease-in-out infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-8px) rotate(1deg); }
+    100% { transform: translateY(0) rotate(-1deg); }
+  }
+
+  /* Секция поздравлений */
+  .greetings {
+    margin-top:26px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap:18px;
+  }
+  .card {
+    background:white;
+    border-radius:12px;
+    padding:18px;
+    box-shadow: 0 8px 26px rgba(20,30,50,0.05);
+    position:relative;
+    overflow:hidden;
+    transition: transform .25s cubic-bezier(.2,.9,.3,1), box-shadow .25s;
+  }
+  .card:hover { transform: translateY(-8px); box-shadow: 0 22px 48px rgba(8,20,40,0.12); }
+  .card .meta {
+    display:flex; align-items:center; gap:12px; margin-bottom:8px;
+  }
+  .avatar {
+    width:44px; height:44px; border-radius:10px;
+    background:linear-gradient(135deg,#86fbcf,#6f9eff);
+    display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700;
+  }
+  .card h3 { font-size:16px; margin-bottom:6px; color:#082033; }
+  .card p { color:#344; font-size:14px; }
+  .card .tag {
+    position:absolute; right:12px; top:12px;
+    background:linear-gradient(90deg,#ffd6a5,#ffb4c6);
+    padding:6px 10px; border-radius:8px; font-size:12px; color:#4a1;
+  }
+
+  /* Подпись */
+  .signature {
+    margin-top:26px;
+    display:flex; justify-content:flex-end; align-items:center; gap:12px;
+    color:#334; font-weight:600;
+  }
+  .signature .small {
+    color:rgba(19,34,46,0.6); font-weight:500; font-size:14px;
+  }
+
+  /* Адаптив */
+  @media (max-width:680px) {
+    .hero { flex-direction:column; align-items:flex-start; }
+    .hero .art { width:100%; height:140px; }
+    .site-header { padding:14px 16px; }
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="logo">
+    <div class="mark">ДК</div>
+    <div>
+      <div class="site-title">Дом культуры</div>
+      <div class="site-sub">Поздравления и мероприятия</div>
+    </div>
+  </div>
+  <nav aria-label="Главное меню">
+    <a href="#greetings" style="text-decoration:none; color:#0b3954; font-weight:600;">Поздравления</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="text">
+      <h1 id="hero-title">Тёплые поздравления от дома культуры</h1>
+      <p>Пусть каждый праздник будет наполнен радостью, музыкой и творчеством. Вы можете выбрать карточку с поздравлением и отправить вашим близким.</p>
+      <a href="#greetings" class="cta">Посмотреть поздравления</a>
+    </div>
+    <div class="art" aria-hidden="true">
+      <!-- Декоративные круги -->
+      <svg width="220" height="140" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute; inset:0;">
+        <circle cx="40" cy="30" r="28" fill="rgba(255,255,255,0.5)"></circle>
+        <circle cx="180" cy="90" r="42" fill="rgba(255,255,255,0.42)"></circle>
+      </svg>
+    </div>
+  </section>
+
+  <section id="greetings" class="greetings" aria-label="Список поздравлений">
+    <article class="card" data-id="1">
+      <div class="meta">
+        <div class="avatar">А</div>
+        <div>
+          <div style="font-weight:700;">С днём рождения</div>
+          <div style="font-size:13px;color:rgba(8,32,48,0.6);">От коллектива ДК</div>
+        </div>
+      </div>
+      <h3>Пусть сбудутся мечты</h3>
+      <p>Желаем вдохновения, здоровья и новых творческих свершений. Пусть каждый день приносит радость.</p>
+      <div class="tag">Тепло</div>
+    </article>
+
+    <article class="card" data-id="2">
+      <div class="meta">
+        <div class="avatar">М</div>
+        <div>
+          <div style="font-weight:700;">С праздником</div>
+          <div style="font-size:13px;color:rgba(8,32,48,0.6);">Клуб любителей</div>
+        </div>
+      </div>
+      <h3>Радости и улыбок</h3>
+      <p>Пусть каждый праздник объединяет родных и друзей, а сцена дарит новые эмоции.</p>
+      <div class="tag">Праздник</div>
+    </article>
+
+    <article class="card" data-id="3">
+      <div class="meta">
+        <div class="avatar">О</div>
+        <div>
+          <div style="font-weight:700;">С юбилеем</div>
+          <div style="font-size:13px;color:rgba(8,32,48,0.6);">Мы с вами</div>
+        </div>
+      </div>
+      <h3>Много счастливых лет</h3>
+      <p>Спасибо за вклад в культуру и творчество. Пусть каждый новый год приносит новые достижения.</p>
+      <div class="tag">Юбилей</div>
+    </article>
+  </section>
+
+  <div class="signature" aria-hidden="false">
+    <div class="small">С уважением</div>
+    <div>От Серебрякова Матвея</div>
+  </div>
+</main>
+
+<script>
+  // Простая анимация появления карточек при скролле
+  const cards = document.querySelectorAll('.card');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = 0;
+        e.target.style.transform = 'translateY(18px)';
+        requestAnimationFrame(() => {
+          e.target.style.transition = 'opacity 520ms ease, transform 520ms cubic-bezier(.2,.9,.3,1)';
+          e.target.style.opacity = 1;
+          e.target.style.transform = 'translateY(0)';
+        });
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.12});
+  cards.forEach(c => io.observe(c));
+
+  // Всплывающее поздравление при клике на карточку
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+      const title = card.querySelector('h3')?.textContent || 'Поздравление';
+      const text = card.querySelector('p')?.textContent || '';
+      showToast(title, text);
+    });
+  });
+
+  function showToast(title, text) {
+    const t = document.createElement('div');
+    t.style.position = 'fixed';
+    t.style.left = '50%';
+    t.style.transform = 'translateX(-50%)';
+    t.style.bottom = '28px';
+    t.style.background = 'linear-gradient(90deg,#3fd3c0,#6fb8ff)';
+    t.style.color = '#052';
+    t.style.padding = '14px 18px';
+    t.style.borderRadius = '12px';
+    t.style.boxShadow = '0 12px 36px rgba(20,40,80,0.12)';
+    t.style.zIndex = 9999;
+    t.style.maxWidth = '90%';
+    t.style.fontWeight = 700;t.style.opacity = '0';
+    t.innerText = title + ' — ' + text;
+    document.body.appendChild(t);
+    requestAnimationFrame(() => { t.style.transition = 'opacity 300ms ease, transform 300ms ease'; t.style.opacity = '1'; t.style.transform = 'translateX(-50%) translateY(-6px)'; });
+    setTimeout(() => {
+      t.style.opacity = '0';
+      t.style.transform = 'translateX(-50%) translateY(6px)';
+      setTimeout(()=> t.remove(), 400);
+    }, 3000);
+  }
+</script>
+</html>
