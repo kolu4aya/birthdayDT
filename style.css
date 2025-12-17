@@ -1943,7 +1943,7 @@ p {
   }
 }
 /* Добавляем на фон эффект "79 лет" с переливами и анимацией */
-body::before {
+.Gordin::before {
   content: "79 лет";
   position: fixed;
   top: 50%;
