@@ -96,7 +96,7 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body {
+.rada {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,7 +419,7 @@ body {
   margin: 0;
   padding: 0;
 }
-body {
+.Serebryakov {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background: linear-gradient(180deg, #f7f9ff 0%, #fff 60%);
   color: #122;
@@ -633,7 +633,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-body {
+.Skochelas {
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient(135deg, #fff5e6 0%, #fff0f5 100%);
   min-height: 100vh;
@@ -827,7 +827,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-body {
+.Skochelas {
   font-family: 'Open Sans', sans-serif;
   background: linear-gradient(135deg, #fffaf0 0%, #fef9e7 100%);
   color: var(--celebration-dark);
@@ -1955,14 +1955,13 @@ body::before {
   font-weight: bold;
   background: linear-gradient(45deg, #000000, #feb47b, #86a8e7, #7f7fd5);
   background-size: 600% 600%;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientShift 10s ease infinite;
   z-index: -1;
   opacity: 0.2;
 }
 /* Общий стиль страницы и фона */
-body {
+.Gordin {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
@@ -1974,23 +1973,6 @@ body {
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
-}
-/* Добавляем на фон эффект "79 лет" с переливами и анимацией */
-body::before {
-  content: "79 лет";
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(4);
-  font-size: 10em;
-  font-weight: bold;
-  background: linear-gradient(45deg, #06b0e3, #85f70d, #003aa5, #ff0408);
-  background-size: 600% 600%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientShift 10s ease infinite;
-  z-index: -1;
-  opacity: 0.2;
 }
 /* Анимация для градиентного перелива */
 @keyframes gradientShift {
@@ -2084,7 +2066,16 @@ h1 {
   color: #555;
   line-height: 1.4;
 }
-body {
+.Artem {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+}
+.Platon {
   margin: 0;
   height: 100vh;
   display: flex;
