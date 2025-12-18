@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Поздравляем!</title>
+    <style>
+        /* Основной стиль */
+        body {
+            background-color: #fcebd9;
+            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+            text-align: center;
+            color: #6b3a64;
+            overflow-x: hidden;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-top: 10%;
+            animation: colorShift 5s infinite alternate-reverse linear;
+        }
+        img{
+            border-radius: 70%;
+            animation: rorol 5s ease-in-out infinite;
+        }
+        @keyframes rorol {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+        @keyframes colorShift {
+            from {color: #ffc6cc;}
+            to   {color: #ffd7bb;}
+        }
+        
+        /* Анимация воздушных шариков */
+        .balloon-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ff939d;
+            opacity: 0.8;
+            animation-name: floatUp;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100px);
+            }
+        }
+        
+        /* Расположение шаров случайным образом */
+        .balloon:nth-child(1) {top: 10%; left: 20%; animation-delay: 1s;}
+        .balloon:nth-child(2) {top: 30%; right: 40%; animation-delay: 2s;}
+        .balloon:nth-child(3) {bottom: 20%; left: 60%; animation-delay: 3s;}
+        .balloon:nth-child(4) {top: 50%; right: 10%; animation-delay: 4s;}
+        .balloon:nth-child(5) {bottom: 10%; left: 30%; animation-delay: 5s;}
+    </style>
+</head>
+<body>
+    
+    <!-- Воздушные шарики -->
+    <div class="balloon-container">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <!-- Основное содержимое -->
+    <div class="container">
+        <h1>С Днём Рождения!</h1>
+        <p>Желаю быть счастливым как этот пёсель.</p>
+    <div class="img">
+        <img src="f5788840432f091200ecd4fcb95ade6a.jpg" alt="Иконка праздника"/>
+    </div>
+
+</body>
+</html>
